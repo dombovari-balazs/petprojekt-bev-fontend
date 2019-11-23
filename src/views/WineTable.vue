@@ -1,7 +1,9 @@
 <template>
-  <div class="winetable">
+  <div class="hello-message">
       <h1>Hello! I'm a WineTable!</h1>
   </div>
+  
+
 </template>
 
 <script>
