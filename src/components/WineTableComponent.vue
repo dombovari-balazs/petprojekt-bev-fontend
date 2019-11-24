@@ -1,10 +1,10 @@
 <template>
   <v-data-table
-    :headers="headers"
-    :items="desserts"
+    :headers="wineHeaders"
+    :items="wines"
     :single-expand="singleExpand"
     :expanded.sync="expanded"
-    item-key="name"
+    item-key="id"
     show-expand
     class="elevation-1"
   >
@@ -23,11 +23,27 @@
 
 <script>
 export default {
+  computed : {
+    wines(){
+      return this.$store.state.wines
+    }
+  },
     data () {
       return {
         expanded: [],
         singleExpand: false,
-        headers: [
+        wineHeaders: [
+          {text : 'id', value : 'id'},
+          {text : 'Megnevezés', value : 'megnevezes'},
+          {text : 'Nettó Egységár', value : 'nettoEgysegar'},
+          {text : 'Bruttó Egységár', value : 'bruttoEgysegar'},
+          {text : 'Mennyiség', value : 'mennyiseg'},
+          {text : 'Fizetendő', value : 'fizetendo'},
+          {text : 'Eredeti Bruttó Egységár', value : 'eredetiBruttoEgysegar'},
+          {text : 'Össz. Bruttó Jutalék', value : 'osszBruttoJutalek'},
+          { text: '', value: 'data-table-expand' },
+        ],
+        dessertHeaders: [
           {
             text: 'Dessert (100g serving)',
             align: 'left',

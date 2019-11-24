@@ -1,11 +1,5 @@
 <template>
-    <div>
-        <h1>
-            Hello I'm a WineTable!
-        </h1>
     <WineTableComponent/>
-
-    </div> 
 </template>
 
 <script>
