@@ -15,10 +15,20 @@
         </v-list-item>
         <v-list-item router :to="routes.wineTable">
           <v-list-item-action>
-            <v-icon>mdi-contact-mail</v-icon>
+            <v-icon>mdi-bottle-wine</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Wine Table</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+
+        <v-list-item router :to="routes.email">
+          <v-list-item-action>
+            <v-icon>mdi-email</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Email selection</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -31,6 +41,10 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Application</v-toolbar-title>
+      <v-spacer />
+      <v-btn router :to="routes.login" icon >
+        <v-icon>mdi-account</v-icon>
+      </v-btn>
     </v-app-bar>
 
     <v-content>
@@ -56,6 +70,8 @@
         home : "/",
         about : "/about",
         wineTable : "/wine-table",
+        email : "/email",
+        login : "/login",
       }
     }),
   }

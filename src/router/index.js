@@ -23,6 +23,17 @@ const routes = [
     name:'wine-table',
     //component: WineTable
     component: () => import('../views/WineTable.vue')
+  },
+  {
+    path:'/email',
+    name:'email',
+    //component: WineTable
+    component: () => import('../views/Email.vue')
+  },
+  {
+    path:'/login',
+    name:'login',
+    component: () => import('../views/LoginForm.vue')
   }
 ]
 
